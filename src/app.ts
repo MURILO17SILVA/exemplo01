@@ -14,3 +14,8 @@ app.use(express.json())
 app.use('/contacts', contactsRouter)
 
 app.get('/', (req, res) => res.send('Contact Book API'))
+
+const port = process.env.PORT || 8080
+app.listen(port,()=> console.log(` Server is listening on ${port}`))
+
+export default app
